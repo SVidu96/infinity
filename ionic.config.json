@@ -1,5 +1,7 @@
 {
   "name": "Infinity",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
