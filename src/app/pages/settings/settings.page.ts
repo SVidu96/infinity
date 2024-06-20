@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthZeroService } from 'src/app/services/auth0/auth-zero.service';
 
 @Component({
   selector: 'app-settings',
@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SettingsPage {
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService:AuthZeroService) { }
 
   logout() {
     this.authService.logout();

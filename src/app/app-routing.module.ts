@@ -13,17 +13,17 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
-    canActivate: [authGuard],
+    //canActivate: [authGuard],
   },
   {
     path:'home',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule),
-    canActivate: [loggedinGuard],
+    //canActivate: [loggedinGuard],
   },
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
-    canActivate: [loggedinGuard],
+    //canActivate: [loggedinGuard],
   },
   //404
   {

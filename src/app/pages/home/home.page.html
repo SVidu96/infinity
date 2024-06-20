@@ -17,4 +17,13 @@
     </ion-row>
   </ion-grid>
   <ion-button expand="block" [routerLink]="['/login']">Login</ion-button>
+  <ion-button expand="block" (click)="login()">Auth Login</ion-button>
+
+  <div *ngIf="user$ | async as user" class="profile-container">
+    <ion-avatar class="avatar">
+      <img [src]="user.picture" [alt]="user.name" />
+    </ion-avatar>
+    <h2>{{ user.name }}</h2>
+    <p>{{ user.email }}</p>
+  </div>
 </ion-content>

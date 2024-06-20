@@ -10,10 +10,19 @@
       <ion-title size="large">Library</ion-title>
     </ion-toolbar>
   </ion-header>
-
+<!-- 
   <ion-item>
     <ion-label>Welcome, {{ user.email }}</ion-label>
-  </ion-item>
+  </ion-item> -->
+
+  <div *ngIf="user$ | async as user" class="profile-container">
+    <ion-avatar class="avatar">
+      <img [src]="user.picture" [alt]="user.name" />
+    </ion-avatar>
+    <h2>{{ user.name }}</h2>
+    <p>{{ user.email }}</p>
+  </div>
+  
 
   <ion-card style="background-image: url('https://picsum.photos/200/300'); background-size: cover">
     <ion-card-header>
